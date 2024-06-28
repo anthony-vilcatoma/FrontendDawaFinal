@@ -1,0 +1,62 @@
+<body class="bg-gray-900 text-white">
+
+    <div class="container mx-auto py-10">
+      <h1 class="text-4xl font-bold mb-8 text-center">TECSUP</h1>
+      <div class="flex justify-between space-x-4">
+        <!-- Tareas Section -->
+        <div class="w-1/3">
+          <h2 class="text-2xl font-bold mb-4">Tareas</h2>
+          <div class="bg-gray-800 p-4 rounded-lg mb-4">
+            <div class="flex justify-between items-center">
+              <div>
+                <h3 class="text-lg font-semibold">LABORATORIO 14 - DAWA</h3>
+                <p class="text-sm text-red-500">Jun 18</p>
+                <p class="text-sm text-gray-400">Educación</p>
+              </div>
+              <i class="fas fa-flask text-red-500"></i>
+            </div>
+          </div>
+          <button class="mt-4 bg-blue-600 text-white py-2 px-4 rounded w-full" (click)="addNewTask('tareas')">Añadir tarea</button>
+          <!-- Formulario de tarea para Tareas -->
+          <app-task-form [selectedTask]="selectedTask"></app-task-form>
+        </div>
+  
+        <!-- Tesis Section -->
+        <div class="w-1/3">
+          <h2 class="text-2xl font-bold mb-4">Tesis</h2>
+          <div class="bg-gray-800 p-4 rounded-lg mb-4">
+            <div class="flex justify-between items-center">
+              <div>
+                <h3 class="text-lg font-semibold">FLUJO DE PROCESOS - UNIWAY</h3>
+                <p class="text-sm text-yellow-500">Jun 22</p>
+              </div>
+              <i class="fas fa-project-diagram text-yellow-500"></i>
+            </div>
+          </div>
+          <button class="mt-4 bg-blue-600 text-white py-2 px-4 rounded w-full" (click)="addNewTask('tesis')">Añadir tarea</button>
+          <!-- Formulario de tarea para Tesis -->
+          <app-task-form [selectedTask]="selectedTask"></app-task-form>
+        </div>
+  
+        <!-- Exposiciones Section -->
+        <div class="w-1/3">
+          <h2 class="text-2xl font-bold mb-4">Exposiciones</h2>
+          <div class="bg-gray-800 p-4 rounded-lg mb-4">
+            <div class="flex justify-between items-center">
+              <div>
+                <h3 class="text-lg font-semibold">SUSTENTACIÓN DE TESIS</h3>
+                <p class="text-sm text-blue-500">miércoles</p>
+                <p class="text-sm text-gray-400">Educación</p>
+              </div>
+              <i class="fas fa-graduation-cap text-blue-500"></i>
+            </div>
+          </div>
+          <button class="mt-4 bg-blue-600 text-white py-2 px-4 rounded w-full" (click)="addNewTask('exposiciones')">Añadir tarea</button>
+          <!-- Formulario de tarea para Exposiciones -->
+          <app-task-form [selectedTask]="selectedTask"></app-task-form>
+        </div>
+      </div>
+    </div>
+  
+  </body>
+  

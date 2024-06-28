@@ -1,0 +1,46 @@
+<!-- task-form.component.html -->
+
+<form *ngIf="selectedTask" (ngSubmit)="saveTask()">
+    <div class="mb-4">
+      <label for="title" class="block text-sm font-medium text-gray-700">Título</label>
+      <input type="text" id="title" name="title" [(ngModel)]="selectedTask.title" required
+             class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+    </div>
+  
+    <div class="mb-4">
+      <label for="description" class="block text-sm font-medium text-gray-700">Descripción</label>
+      <textarea id="description" name="description" [(ngModel)]="selectedTask.description"
+                class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"></textarea>
+    </div>
+  
+    <div class="mb-4">
+      <label for="dueDate" class="block text-sm font-medium text-gray-700">Fecha de vencimiento</label>
+      <input type="date" id="dueDate" name="dueDate" [(ngModel)]="selectedTask.dueDate"
+             class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+    </div>
+  
+    <div class="mb-4">
+      <label for="taskType" class="block text-sm font-medium text-gray-700">Tipo de tarea</label>
+      <input type="text" id="taskType" name="taskType" [(ngModel)]="selectedTask.taskType"
+             class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+    </div>
+  
+    <div class="mb-4">
+      <label for="completed" class="block text-sm font-medium text-gray-700">Completado</label>
+      <input type="checkbox" id="completed" name="completed" [(ngModel)]="selectedTask.completed"
+             class="mt-1 focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded">
+    </div>
+  
+    <div class="mb-4">
+      <label for="enable" class="block text-sm font-medium text-gray-700">Habilitado</label>
+      <input type="checkbox" id="enable" name="enable" [(ngModel)]="selectedTask.enable"
+             class="mt-1 focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded">
+    </div>
+  
+    <div class="flex justify-between">
+      <button type="submit" class="bg-blue-600 text-white py-2 px-4 rounded">Guardar</button>
+      <button type="button" class="bg-gray-400 text-gray-800 py-2 px-4 rounded"
+              (click)="cancel()">Cancelar</button>
+    </div>
+  </form>
+  
